@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/colorAccent"
+    android:layout_height="match_parent">
+<HorizontalScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/colorPrimary"
+    android:scrollbars="horizontal"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:id="@+id/tabs"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="140dp"
+            android:layout_height="?attr/actionBarSize"
+            android:text="Offers"
+            android:textColor="#ffffff"
+            android:background="@drawable/edittext"/>
+    </LinearLayout>
+</HorizontalScrollView>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tab_webview">
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/swiper">
+
+        <im.delight.android.webview.AdvancedWebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/webview">
+        </im.delight.android.webview.AdvancedWebView>
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="9dp"
+            android:id="@+id/progress_horizontal"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:indeterminate="false"
+            android:indeterminateOnly="false"
+            android:max="100"
+            android:layout_gravity="top"
+            android:progress="45"/>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/ic_cancel_white_36dp"
+    android:layout_gravity="top|right"
+    android:layout_margin="9dp"
+    app:backgroundTint="@color/colorAccent"
+    android:background="@color/colorAccent"
+    app:rippleColor="@color/colorPrimaryDark"
+    android:clickable="true"/>
+    </FrameLayout>
+
+</LinearLayout>

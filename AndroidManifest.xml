@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:tools="http://schemas.android.com/tools"
+    package="com.hexagon.translator"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+<uses-permission android:name="android.permission.CAMERA"/>
+<uses-feature android:required="false" android:name="android.hardware.camera"/>
+    <application
+        android:icon="@drawable/icon"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:label="Hexagon Translator"
+        android:usesCleartextTraffic="true"
+        android:testOnly="false"
+        android:theme="@style/MyMaterialTheme"
+       >
+
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/MyMaterialTheme.Launcher"
+            android:label="Translator">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Second"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize">
+            <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <data android:scheme="http" android:host="translator"/>
+            <data android:scheme="https" android:host="translator"/>
+            <data android:scheme="http" android:host="translated"/>
+            <data android:scheme="https" android:host="translated"/>
+            <data android:scheme="http" android:host="translates"/>
+            <data android:scheme="https" android:host="translates"/>
+            <data android:scheme="http" android:host="translate"/>
+            <data android:scheme="https" android:host="translate"/>
+            <data android:scheme="http" android:host="translation"/>
+            <data android:scheme="https" android:host="translation"/>
+            <data android:scheme="http" android:host="language"/>
+            <data android:scheme="https" android:host="language"/>
+            <data android:scheme="http" android:host="languages"/>
+            <data android:scheme="https" android:host="languages"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".Image"
+android:label="Image"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/MyMaterialTheme.Base1"/>
+        <service
+            android:name=".Heads"
+            android:enabled="true"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <service
+            android:name=".Closer"
+            android:enabled="true"
+            android:exported="false"/>
+        <service
+            android:name=".Webviewone"
+            android:enabled="true"
+            android:exported="false"/>
+        <receiver android:name=".Receiver">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.ACTION_SHUTDOWN"></action>
+                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL"/>
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED"/>
+                <action android:name="ACTION_BOOT_COMPLETED"/>
+                <action android:name="ACTION_LOCKED_BOOT_COMPLETED"/>
+                <action android:name="ACTION_NEXT_ALARM_CLOCK_CHANGED"/>
+                <action android:name="ACTION_NEW_OUTGOING_CALL"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.PHONE_STATE"/>
+                <action android:name="ACTION_CARRIER_CONFIG_CHANGED"/>
+                <action android:name="ACTION_PHONE_STATE_CHANGED"/>
+                <action android:name="ACTION_PHONE_ACCOUNT_REGISTERED"/>
+                <action android:name="ACTION_PHONE_ACCOUNT_UNREGISTERED"/>
+                <action android:name="ACTION_MEDIA_MOUNTED"/>
+                <action android:name="ACTION_MEDIA_UNMOUNTED"/>
+                <action android:name="ACTION_USB_DEVICE_ATTACHEDUS"/>
+                <action android:name="ACTION_USB_ACCESSORY_ATTACHED"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="ACTION_PACKAGE_FULLY_REMOVED"/>
+                <action android:name="ACTION_PACKAGE_DATA_CLEARED"/>
+                <action android:name="SMS_RECEIVED_ACTION"/>
+                <action android:name="WAP_PUSH_RECEIVED_ACTION"/>
+                <action android:name="ACTION_PACKAGE_DATA_CLEARED"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name=".Offers"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="Offers"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+
+    <item android:id="@+id/action_settings" android:title="Help"
+        />
+    <item android:id="@+id/contact" android:title="Contact Us"
+        />
+    <item android:id="@+id/terms" android:title="Privacy Policy"
+        />
+    <item android:id="@+id/offers" android:title="Offers"
+        />
+</menu>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<CheckBox
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Enable Advance text processing? (getting text from an image might take longer than usual)"
+    android:textSize="13sp"
+    android:layout_margin="9dp"
+    android:textColor="#000000"
+    android:id="@+id/checkbox"
+    />
+
+</LinearLayout>

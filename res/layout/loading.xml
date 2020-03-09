@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="19sp"
+       android:textStyle="bold"
+        android:id="@+id/title"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginBottom="4dp"
+        android:text="title"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="11sp"
+        android:id="@+id/sub"
+        android:layout_marginTop="4dp"
+android:layout_marginRight="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginBottom="4dp"
+        android:text="You might have to wait a while before the process is completed. Also, the output might not always provide a 100% accuracy."/>
+    <ProgressBar
+        android:id="@+id/progressBar_cyclic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:minWidth="50dp"
+        android:layout_margin="10dp"
+       android:layout_gravity="center"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="18sp"
+        android:layout_margin="5dp"
+        android:hint="Result"
+        android:textColorHint="#B8B7B7"
+        android:id="@+id/result"
+        android:focusableInTouchMode="true"
+        android:text=""
+        android:lineSpacingExtra="3dp"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:visibility="gone"
+
+        />
+</LinearLayout>
